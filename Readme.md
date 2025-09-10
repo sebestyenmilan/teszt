@@ -29,6 +29,7 @@
  > git remote add origin --link--
 
 - első push:
-    >
-    
-- 
+    > git push -u origin master
+
+- további push:
+    > git push
