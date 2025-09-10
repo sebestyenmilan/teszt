@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+
+        body {
+            background-color: Srgb(39, 39, 39);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #felulet {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+        button {
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 298px;
+            width: 98px;
+            box-shadow: 5px 5px 20px white;
+            font-size: 32px;
+        }
+
+        #tarolo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 298px;
+            width: 298px;
+            background-color: #5efad8;
+            border: 2px solid black;
+            box-shadow: 5px 5px 20px white;
+            border-radius: 50%;
+            font-size: 64px;
+            margin: 0px 5px;
+        }
+
+
+
+    </style>
+
+    <script>
+
+        let szam = 0;
+
+        function minusz() {
+            
+            if (szam>-5) {
+                szam--;
+            document.getElementById("szam").innerHTML = szam;
+            }
+        }
+
+        function plusz() {
+            
+            if (szam<5) {
+                szam++;
+            document.getElementById("szam").innerHTML = szam;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="felulet">
+
+        <button id="minusz" onclick="minusz();">-</button>
+            <div id="tarolo"><span id="szam">0</span></div>
+            <button id="plusz" onclick="plusz();">+</button>
+
+    </div>
+
+    
+
+</body>
+
+</html>
