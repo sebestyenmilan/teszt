@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 300px;
+            height: 100px;
+            gap: 20px;
+            justify-content: center;  
+            align-items: center;
+            background-color: aquamarine; 
+        }
+        button{
+            background-color: black;
+            color: aliceblue;
+            min-width: 150px;
+            min-height: 100px;
+        }
+        .nr{
+            border: 4px salmon solid;
+            padding: 20px;
+            border-radius: 20%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="decrement()">-</button>
+        <div class="nr">0</div>
+        <button onclick="increment()">+</button>
+    </div>
+    <script>
+        const decrement=()=>{
+            let number = +document.querySelector(".nr").textContent;
+            console.log(number)
+            document.querySelector(".nr").textContent = number <= 0 ? number : number -1;
+        }
+        const increment=()=>{
+            let number = +document.querySelector(".nr").textContent;
+            document.querySelector(".nr").textContent = number + 1;
+        }
+    </script>
+</body>
+</html>
